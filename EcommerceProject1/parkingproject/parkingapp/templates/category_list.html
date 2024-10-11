@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<div>
+    <div >
+        <h2>Add Category</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div>
+    <h2>Category List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Category_ID</th>
+                <th>Parking Area Number</th>
+                <th>Vehicle Type</th>
+                <th>Vehicle Limit</th>
+                <th>Parking Charge</th>
+                <th>Status</th>
+                <th>Doc</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.cat_id}}</td>
+                <td>{{ category.parking_area_no }}</td>
+                <td>{{ category.vehicle_type }}</td>
+                <td>{{ category.vehicle_limit }}</td>
+                <td>{{ category.parking_charge }}</td>
+                <td>{{ category.status}}</td>
+                <td>{{ category.Doc}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
