@@ -1,0 +1,3 @@
+cart = 0
+for a in cart_data:
+    cart+=1
