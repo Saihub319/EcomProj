@@ -5,14 +5,6 @@ from .forms import vehicleForm,CategoryForm,VehicleSearchForm
 from .models import Category, AddVehicle
 from django.contrib.auth import logout
 from django.contrib import messages
-
-
-
-
-
-
-
-from django.shortcuts import render, redirect
 from .models import Admin
 from django.contrib.auth.hashers import check_password,make_password
 
@@ -189,3 +181,8 @@ def account_settings(request):
             return redirect('adminlogin')
 
     return render(request, 'account_settings.html')
+
+
+def num_parking_slots(request):
+   slots_area = Parkingslots.objects.all()
+   return render(request,'parking_slot.html',{'slot_list':slots_area})

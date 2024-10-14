@@ -1,0 +1,12 @@
+                      GIT NOTES
+                     ==========
+1.git init   -----This command will create a .git folder in our local repository 
+                     This will track our entire changes.
+2.git add .  ---- This command is used to transfer all the files from W.D to S.A 
+3.git add <file name>
+   ex:  git add CreatingAPI.txt   --- This command is used to send specific files   
+  -----  git add Teamplates.txt
+4.git commit -m "Worked on API's and Templates"  --- This command is used to send all files present in S.A to local
+                                                                                    repository in bunch
+5. git rm --cached <file name>   --- This command is used to bring back the added file from S.A to W.D  
+        
