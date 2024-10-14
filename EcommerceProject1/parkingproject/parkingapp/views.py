@@ -184,5 +184,5 @@ def account_settings(request):
 
 
 def num_parking_slots(request):
-   slots = Parkingslots.objects.all()
-   return render(request,'parking_slot.html',{'slot_list':slots})
+   slots_area = Parkingslots.objects.all()
+   return render(request,'parking_slot.html',{'slot_list':slots_area})
